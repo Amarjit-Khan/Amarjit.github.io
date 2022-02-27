@@ -12,5 +12,5 @@ $headers = "From: btheory994@gmail.com";
 
 mail($to, $subject, $txt, $headers);
 
-header("Location:portfolio.html");
+header("Location:index.html");
 ?>
