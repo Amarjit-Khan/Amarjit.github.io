@@ -10,7 +10,8 @@ $to = "btheory994@gmail.com";
 $txt = "Name :: " . $name . "\r\n Email :: " . $email . "\r\n Subject :: " . $subject . "\r\n Message :: " . $message;
 $headers = "From: btheory994@gmail.com";
 
-mail($to, $subject, $txt, $headers);
+// mail($to, $subject, $txt, $headers);
 
-header("Location:index.html");
+// header("Location:index.html");
+echo($txt);
 ?>
