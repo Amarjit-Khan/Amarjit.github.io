@@ -1,2 +1,2 @@
 # Amarjit.github.io
-Portfolio Website
+Portfolio website
