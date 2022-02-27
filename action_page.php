@@ -1,8 +1,8 @@
 <?php
-$name = $_POST['Name'];
-$email = $_POST['Email'];
-$subject = $_POST['Subject'];
-$message = $_POST['Message'];
+$name = $_GET['Name'];
+$email = $_GET['Email'];
+$subject = $_GET['Subject'];
+$message = $_GET['Message'];
 
 $to = "btheory994@gmail.com";
 
