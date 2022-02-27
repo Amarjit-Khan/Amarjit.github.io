@@ -1,0 +1,555 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  /* background-image: url("https://i.pinimg.com/originals/29/1e/f6/291ef68e20a73a7f4a4c2a9fc9735cf0.jpg"); */
+  /* background-image: url("https://images.hdqwalls.com/download/long-alone-dark-road-sunset-view-z7-3840x2400.jpg"); */
+  background-image: url("./background.jpg");
+  min-height: 100%;
+}
+
+.a-bar .a-button {
+  padding: 16px;
+}
+
+.a-bar {
+  width: 100%;
+  overflow: hidden;
+}
+
+.a-bar-block .a-bar-item {
+  width: 100%;
+  display: block;
+  padding: 8px 16px;
+  text-align: left;
+  border: none;
+  white-space: normal;
+  float: none;
+  outline: 0;
+}
+
+.w3-black,
+.w3-hover-black:hover {
+  color: #fff !important;
+  /* background-color: #1319d2 !important; */
+  background-color: black !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 8px 17px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #ffffff;
+  background: #1319d2;
+  border: 1px solid #ffffff00;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+}
+
+.a-card,
+.a-card-2 {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+@media only screen and (min-width: 768px) {
+  .btn.btn-border-1::after,
+  .btn.btn-border-1::before {
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 0%;
+    visibility: hidden;
+  }
+
+  .btn.btn-border-1::after {
+    bottom: -3px;
+    right: -3px;
+    border-left: 3px solid #1319d2;
+    border-bottom: 3px solid #1319d2;
+    transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+  }
+
+  .btn.btn-border-1::before {
+    top: -2px;
+    left: 0px;
+    border-top: 3px solid #1319d2;
+    border-right: 3px solid #1319d2;
+    transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+  }
+
+  .btn.btn-border-1:hover {
+    animation: pulse 1s ease-out 0.4s;
+    color: black;
+    background-color: #fff;
+  }
+
+  .btn.btn-border-1:hover::after,
+  .btn.btn-border-1:hover::before {
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    visibility: visible;
+    transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+  }
+
+  .btn.btn-border-1:hover::after {
+    transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+  }
+
+  .btn.btn-border-1:hover::before {
+    transition: width 0.1s ease, height 0.1s ease 0.1s;
+  }
+}
+
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  /* background-image: url(https://i.pinimg.com/originals/29/1e/f6/291ef68….jpg); */
+  background-image: url(https://images.hdqwalls.com/download/long-alone-dark-road-sunset-view-z7-3840x2400.jpg);
+  min-height: 60%;
+}
+
+.a-greyscale-min,
+.a-grayscale-min {
+  filter: grayscale(50%);
+}
+
+.w3-tooltip,
+.a-display-container {
+  position: relative;
+}
+
+.a-large {
+  font-size: 33px;
+  margin-top: 35px;
+  padding-top: 0px;
+}
+
+.a-jumbo {
+  font-size: 76px !important;
+}
+
+.a-medium {
+  font-size: 20px;
+}
+
+.a-white,
+.a-hover-white:hover {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+
+.w3-padding-large {
+  padding: 12px 24px !important;
+}
+
+.a-margin-top {
+  margin-top: 16px !important;
+}
+
+.a-opacity,
+.a-hover-opacity:hover {
+  opacity: 0.6;
+}
+
+.a-opacity-off,
+.a-hover-opacity-off:hover {
+  opacity: 1;
+}
+
+.a-btn,
+.a-button {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.a-btn,
+.a-button {
+  border: none;
+  display: inline-block;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.a-button:hover {
+  background-color: rgb(209, 204, 204);
+  /* color: #1319d2; */
+}
+
+a {
+  color: inherit;
+}
+
+a {
+  background-color: transparent;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+user agent stylesheet a:-webkit-any-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.a-text-white,
+.a-hover-text-white:hover {
+  color: #fff !important;
+}
+
+.a-flex {
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .a-large {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 898px) {
+  .a-flex {
+    flex-direction: column;
+  }
+}
+
+.a-text-grey,
+.w3-hover-text-grey:hover,
+.w3-text-gray,
+.w3-hover-text-gray:hover {
+  color: #b3b9bb !important;
+}
+
+.a-sidebar {
+  /* height: 100%; */
+  width: 200px;
+  background-color: #fff;
+  position: fixed !important;
+  z-index: 1;
+  overflow: auto;
+  top: 0px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 0px 70px 0;
+  /* background-color: #111; */
+  background-color: #fff;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  background-color: #f1f1f1;
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  /* height: 215px; */
+  transition: all 1s ease-in;
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.timeline-content .date {
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .timeline ul {
+    padding: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-50px);
+    border-radius: 20px 0px 20px 20px;
+  }
+
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(11px);
+    border-radius: 0px 20px 20px 20px;
+  }
+
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+
+  .timeline-content .date {
+    position: absolute;
+    top: -30px;
+  }
+
+  .timeline ul li:hover::before {
+    background-color: #1319d2;
+    /* background-color: rgb(255, 255, 255); */
+    /* border: 3px solid #1319d2; */
+    /* transform: translate(50%); */
+  }
+}
+
+.promo {
+  /* background-color: aqua; */
+  width: auto;
+  padding-bottom: 100px;
+}
+
+.promo1 {
+  margin: auto;
+  width: max-content;
+}
+
+@media only screen and (max-width: 400px) {
+  .promo1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .left-go {
+    left: -21px;
+  }
+}
+
+.a-wide {
+  letter-spacing: 4px;
+  display: inline-block;
+}
+
+.a-grey,
+.a-hover-grey:hover,
+.a-gray,
+.a-hover-gray:hover {
+  color: #000 !important;
+  background-color: #9e9e9e !important;
+  display: grid;
+  width: 47vw;
+  margin: 10px 31px 10px 0px;
+  padding: 0px;
+  /* left: 39px; */
+  /* position: relative; */
+  align-content: space-between;
+  justify-items: start;
+  /* flex-direction: column; */
+}
+
+.flex-class {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 870px) and (min-width: 700px) {
+  .a-grey,
+  .a-hover-grey:hover,
+  .a-gray,
+  .a-hover-gray:hover {
+    width: 44vw;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .flex-class {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .a-grey {
+    width: 100%;
+  }
+}
+
+.a-black,
+.a-hover-black:hover {
+  color: #fff !important;
+  /* background-color: #1319d2 !important; */
+  background-color: #000000bd !important;
+}
+
+.a-modal {
+  z-index: 3;
+  display: none;
+  /* padding-top: 32px; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.a-input {
+  padding: 8px;
+  display: block;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+}
+
+.a-input:focus {
+  outline: none;
+  border: 1px solid rgb(65, 62, 62);
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+input,
+select,
+textarea,
+optgroup {
+  font: inherit;
+  margin: 0;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(255, 255, 255, 0.795);
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  height: 35px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(255, 255, 255, 0.795) transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
