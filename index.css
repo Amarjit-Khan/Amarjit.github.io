@@ -35,13 +35,15 @@ html {
 
 .a-bar-block .a-bar-item {
   width: 100%;
-  display: block;
+  display: flex;
   padding: 8px 16px;
   text-align: left;
   border: none;
   white-space: normal;
   float: none;
   outline: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .w3-black,
@@ -78,54 +80,54 @@ html {
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
 }
 
-@media only screen and (min-width: 768px) {
-  .btn.btn-border-1::after,
-  .btn.btn-border-1::before {
-    position: absolute;
-    content: "";
-    width: 0%;
-    height: 0%;
-    visibility: hidden;
-  }
-
-  .btn.btn-border-1::after {
-    bottom: -3px;
-    right: -3px;
-    border-left: 3px solid #1319d2;
-    border-bottom: 3px solid #1319d2;
-    transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
-  }
-
-  .btn.btn-border-1::before {
-    top: -2px;
-    left: 0px;
-    border-top: 3px solid #1319d2;
-    border-right: 3px solid #1319d2;
-    transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
-  }
-
-  .btn.btn-border-1:hover {
-    animation: pulse 1s ease-out 0.4s;
-    color: black;
-    background-color: #fff;
-  }
-
-  .btn.btn-border-1:hover::after,
-  .btn.btn-border-1:hover::before {
-    width: calc(100% + 3px);
-    height: calc(100% + 3px);
-    visibility: visible;
-    transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
-  }
-
-  .btn.btn-border-1:hover::after {
-    transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
-  }
-
-  .btn.btn-border-1:hover::before {
-    transition: width 0.1s ease, height 0.1s ease 0.1s;
-  }
+/* @media only screen and (min-width: 768px) { */
+.btn.btn-border-1::after,
+.btn.btn-border-1::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 0%;
+  visibility: hidden;
 }
+
+.btn.btn-border-1::after {
+  bottom: -3px;
+  right: -3px;
+  border-left: 3px solid #1319d2;
+  border-bottom: 3px solid #1319d2;
+  transition: width 0.1s ease 0.1s, height 0.1s ease, visibility 0s 0.2s;
+}
+
+.btn.btn-border-1::before {
+  top: -2px;
+  left: 0px;
+  border-top: 3px solid #1319d2;
+  border-right: 3px solid #1319d2;
+  transition: width 0.1s ease 0.3s, height 0.1s ease 0.2s, visibility 0s 0.4s;
+}
+
+.btn.btn-border-1:hover {
+  animation: pulse 1s ease-out 0.4s;
+  color: black;
+  background-color: #fff;
+}
+
+.btn.btn-border-1:hover::after,
+.btn.btn-border-1:hover::before {
+  width: calc(100% + 3px);
+  height: calc(100% + 3px);
+  visibility: visible;
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+
+.btn.btn-border-1:hover::after {
+  transition: width 0.1s ease 0.2s, height 0.1s ease 0.3s, visibility 0s 0.2s;
+}
+
+.btn.btn-border-1:hover::before {
+  transition: width 0.1s ease, height 0.1s ease 0.1s;
+}
+/* } */
 
 .bgimg-1 {
   background-position: center;
@@ -213,6 +215,12 @@ html {
   /* color: #1319d2; */
 }
 
+.buttonhover:hover {
+  background-color: #000;
+  color: #1319d2;
+  font-weight: 600;
+}
+
 a {
   color: inherit;
 }
@@ -263,12 +271,13 @@ user agent stylesheet a:-webkit-any-link {
 
 .a-sidebar {
   /* height: 100%; */
-  width: 200px;
-  background-color: #fff;
+  width: 176px;
+  /* background-color: #fff; */
   position: fixed !important;
   z-index: 1;
   overflow: auto;
   top: 0px;
+  border-bottom-right-radius: 12px;
 }
 
 .container {
@@ -419,7 +428,7 @@ user agent stylesheet a:-webkit-any-link {
 
 @media only screen and (min-width: 700px) {
   .left-go {
-    left: -21px;
+    left: 5px;
   }
 }
 
@@ -525,7 +534,7 @@ optgroup {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 130px;
   background-color: rgba(255, 255, 255, 0.795);
   color: black;
   text-align: center;
@@ -552,4 +561,49 @@ optgroup {
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.tooltip-black {
+  position: relative;
+  display: inline-block;
+  /* border-bottom: 1px dotted black; */
+}
+
+.tooltip-black .tooltiptext-black {
+  visibility: hidden;
+  width: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 90%;
+  margin-left: -60px;
+}
+
+.tooltip-black .tooltiptext-black::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip-black:hover .tooltiptext-black {
+  visibility: visible;
+}
+
+.a-pad {
+  padding: 0px 24px !important;
+}
+
+::selection {
+  background: #1319d2;
+  color: #fff;
 }
