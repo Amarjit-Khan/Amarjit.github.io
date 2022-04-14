@@ -3,8 +3,10 @@
 <title>AMARJIT KHAN</title>
 
 <meta charset="UTF-8">
-<meta name="description" content="I am Amarjit Khan, a sophomore at GCECT. I am a Full Stack Web Developer and coder. Visit the website to know more about me.">
-<meta name="keywords" content="Amarjit, Amarjit-Khan, amarjit, amarjit khan, full stack web developer, Frontend Web Developer, coder, sophomore">
+<meta name="description"
+    content="I am Amarjit Khan, a sophomore at GCECT. I am a Full Stack Web Developer and coder. Visit the website to know more about me.">
+<meta name="keywords"
+    content="Amarjit, Amarjit-Khan, amarjit, amarjit khan, full stack web developer, Frontend Web Developer, coder, sophomore">
 <meta name="author" content="Amarjit Khan">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- <meta http-equiv="refresh" content="5"> -->
@@ -26,439 +28,511 @@
         top: 0px;
         /* display: none; */
     }
+
+    .content {
+        display: none;
+    }
+
+    .loader {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-color: black;
+        position: absolute;
+    }
+
+    .loader>div {
+        background: url(gif.gif) no-repeat center center;
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-size: 15%;
+    }
 </style>
 
 <body>
-    <div id="preloader"></div>
-
-    <!-- Navbar (sit on top) -->
-    <div class="w3-top">
-        <div class="a-bar a-white a-card" id="myNavbar">
-            <a href="#home" class="a-bar-item a-button w3-wide">AMARJIT KHAN</a>
-            <!-- Right-sided navbar links -->
-            <div class="w3-right w3-hide-small">
-                <a href="#about" class="a-bar-item a-button">ABOUT</a>
-                <a href="#work" class="a-bar-item a-button"><i class="fa fa-table-cells"></i> WORK</a>
-                <a href="#skills" class="a-bar-item a-button"><i class="fa fa-user"></i> SKILLS</a>
-                <a href="#contact" class="a-bar-item a-button"><i class="fa fa-envelope"></i> CONTACT</a>
-            </div>
-            <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-            <a href="javascript:void(0)" class="a-bar-item a-button w3-right w3-hide-large w3-hide-medium"
-                onclick="a_open()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
+    <div class="loader">
+        <div></div>
     </div>
 
-    <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="a-sidebar a-bar-block w3-black a-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none"
-        id="mySidebar">
-        <a href="javascript:void(0)" onclick="a_close()" class="a-bar-item a-button w3-padding-16 a-medium">Close
-            ×</a>
-        <a href="#about" onclick="a_close()" class="a-bar-item a-button">ABOUT</a>
-        <a href="#work" onclick="a_close()" class="a-bar-item a-button">WORK</a>
-        <a href="#skills" onclick="a_close()" class="a-bar-item a-button"> SKILLS</a>
-        <a href="#contact" onclick="a_close()" class="a-bar-item a-button">CONTACT</a>
-    </nav>
+    <div class="content">
+        <!-- Navbar (sit on top) -->
+        <div class="w3-top">
+            <div class="a-bar a-white a-card" id="myNavbar">
+                <a href="#home" class="a-bar-item a-button w3-wide">AMARJIT KHAN</a>
+                <!-- Right-sided navbar links -->
+                <div class="w3-right w3-hide-small">
+                    <a href="#about" class="a-bar-item a-button">ABOUT</a>
+                    <a href="#work" class="a-bar-item a-button"><i class="fa fa-table-cells"></i> WORK</a>
+                    <a href="#skills" class="a-bar-item a-button"><i class="fa fa-user"></i> SKILLS</a>
+                    <a href="#contact" class="a-bar-item a-button"><i class="fa fa-envelope"></i> CONTACT</a>
+                </div>
+                <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <!-- Header with full-height image -->
-    <header class="bgimg-1 a-display-container a-grayscale-min" id="home">
-        <div class="a-text-white" style="padding: 197px 0px;
+                <a href="javascript:void(0)" class="a-bar-item a-button w3-right w3-hide-large w3-hide-medium"
+                    onclick="a_open()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sidebar on small screens when clicking the menu icon -->
+        <nav class="a-sidebar a-bar-block w3-black a-card w3-animate-left w3-hide-medium w3-hide-large"
+            style="display:none" id="mySidebar">
+            <a href="javascript:void(0)" onclick="a_close()" class="a-bar-item a-button w3-padding-16 a-medium">Close
+                ×</a>
+            <a href="#about" class="a-bar-item a-button buttonhover">ABOUT</a>
+            <a href="#work" class="a-bar-item a-button buttonhover">WORK</a>
+            <a href="#skills" class="a-bar-item a-button buttonhover"> SKILLS</a>
+            <a href="#contact" class="a-bar-item a-button buttonhover">CONTACT</a>
+        </nav>
+
+        <!-- Header with full-height image -->
+        <!-- <header class="bgimg-1 a-display-container a-grayscale-min" id="home"> -->
+        <header class="bgimg-1 a-display-container" id="home">
+            <div class="a-text-white" style="padding: 197px 0px;
         margin: 1px auto;
         text-align: center;">
-            <span class="a-large">Hi, I am</span><br>
-            <span class="a-jumbo w3-hide-small">Amarjit Khan</span><br>
-            <span class="w3-xxlarge w3-hide-large w3-hide-medium">Amarjit Khan</span><br>
-            <span style="color: grey; font-size: 23px;">|&nbsp; SECOND YEAR UNDERGRAD&nbsp; | &nbsp;FULL STACK DEVELOPER
-                &nbsp;|</span>
-            <p><a href="#about"
-                    class="a-button a-white w3-padding-large a-medium w3-margin-top a-opacity a-hover-opacity-off">Learn
-                    About Me &nbsp;<i class="fa-solid fa-angle-down"></i></a></p>
-        </div>
-        <div class="a-text-grey w3-large"
-            style="padding:24px 48px; position: relative;    top: -141px;    padding: 24px 48px;    margin: 0px auto;    width: 222px;">
-            <a href="#" class="tooltip"><i class="fa fa-facebook-official a-hover-opacity"></i><span
-                    class="tooltiptext">Facebook</span></a>
-            <a href="#" class="tooltip"><i class="fa fa-instagram a-hover-opacity"></i><span
-                    class="tooltiptext">Instagram</span></a>
-            <a href="https://github.com/Amarjit-Khan" target="_blank" class="tooltip"><i
-                    class="fa-brands fa-github a-hover-opacity"></i><span class="tooltiptext">Github</span></a>
-            <a href="" class="tooltip"><i class="fa-brands fa-hackerrank a-hover-opacity"></i><span
-                    class="tooltiptext">HackerRank</span></a>
-            <a href="" class="tooltip"><i class="fa fa-twitter a-hover-opacity"></i><span
-                    class="tooltiptext">Twitter</span></a>
-            <a href="" class="tooltip"><i class="fa fa-linkedin a-hover-opacity"></i><span
-                    class="tooltiptext">LinkedIn</span></a>
-        </div>
-    </header>
+                <span class="a-large">Hi, I am</span><br>
+                <span class="a-jumbo w3-hide-small">Amarjit Khan</span><br>
+                <span class="w3-xxlarge w3-hide-large w3-hide-medium">Amarjit Khan</span><br>
+                <span style="color: grey; font-size: 23px;">|&nbsp; SECOND YEAR UNDERGRAD&nbsp; | &nbsp;FULL STACK
+                    DEVELOPER
+                    &nbsp;|</span>
+                <p><a href="#about"
+                        class="a-button a-white w3-padding-large a-medium w3-margin-top a-opacity a-hover-opacity-off">Learn
+                        About Me &nbsp;<i class="fa-solid fa-angle-down"></i></a></p>
+            </div>
+            <div class="a-text-grey w3-large"
+                style="padding:24px 48px; position: relative;    top: -141px;    padding: 24px 48px;    margin: 0px auto;    width: 222px;">
+                <a href="#" class="tooltip"><i class="fa fa-facebook-official a-hover-opacity"></i><span
+                        class="tooltiptext">Facebook</span></a>
+                <a href="https://www.instagram.com/__amar_jit__/" target="_blank" class="tooltip"><i
+                        class="fa fa-instagram a-hover-opacity"></i><span class="tooltiptext">Instagram</span></a>
+                <a href="https://github.com/Amarjit-Khan" target="_blank" class="tooltip"><i
+                        class="fa-brands fa-github a-hover-opacity"></i><span class="tooltiptext">Github</span></a>
+                <a href="https://www.hackerrank.com/amarjitkhan740" target="_blank" class="tooltip"><i
+                        class="fa-brands fa-hackerrank a-hover-opacity"></i><span
+                        class="tooltiptext">HackerRank</span></a>
+                <a href="https://www.cloudskillsboost.google/public_profiles/68617361-cff1-4380-919b-3e41c95ec22a"
+                    target="_blank" class="tooltip"><i class="fa-brands fa-google a-hover-opacity"></i><span
+                        class="tooltiptext">Google Cloud</span></a>
+                <a href="https://www.linkedin.com/in/amarjit-khan-0b6985233" target="_blank" class="tooltip"><i
+                        class="fa fa-linkedin a-hover-opacity"></i><span class="tooltiptext">LinkedIn</span></a>
+            </div>
+        </header>
 
-    <!-- About Section -->
-    <div class="w3-container" style="padding:128px 16px 51px 16px;" id="about">
-        <h3 class="w3-center">ABOUT ME</h3>
-        <div class="w3-row-padding w3-center" style="margin-top:64px; -webkit-touch-callout: none;
+        <!-- About Section -->
+        <div class="w3-container" style="padding:128px 16px 51px 16px;" id="about">
+            <h3 class="w3-center">ABOUT ME</h3>
+            <div class="w3-row-padding w3-center" style="margin-top:64px; -webkit-touch-callout: none;
         -webkit-user-select: none;
         -khtml-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;">
-            Hi, I am Amarjit Khan, a Full Stack Web Developer and coder. I am from India (West Bengal). I am
-            currently pursuing B.tech from Government College of Engineering and Ceramic Technology, Beleghata.
-            I have great interest in the field of Cyber-Security and Cloud Computing. I don't like to define myself
-            by the work I've done. I define myself by the work I want to
-            do. Skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself,
-            and do interesting things that matter. Fueled by high energy
-            levels and boundless enthusiasm, I'm easily inspired and more than willing to follow my fascinations
-            wherever they take me. I'm passionate,
-            expressive, multi-talented spirit with a natural ability to entertain and inspire. I'm never satisfied to
-            just come up with ideas.
-            Instead I have an utmost impulsive need to act on them. My abundant energy fuels me in the pursuit of many
-            interests, hobbies, areas of study and artistic endeavors.
-            I'm a fast learner, able to pick up new skills and juggle different projects and roles with ease.
-        </div>
-    </div>
-
-    <!-- Education Section -->
-    <h3 class="w3-center">Education</h3>
-    <br>
-    <div class="container">
-        <div class="timeline">
-            <ul>
-                <li>
-                    <div class="timeline-content">
-                        <h3 class="date">April 2020 - Present Date</h3>
-                        <h1>Bachelor of Technology Degree</h1>
-                        <p>
-                            <b style="font-weight:bold">Govenment College of Engineering and Ceramic Technology</b><br>
-                            <span><b style="font-weight:bold">Department :</b></span> Computer Science and
-                            Engineering<br>
-                            <span><b style="font-weight:bold">Courses :</b></span> Data Structures, Algorithms, Computer
-                            Organisation, Computer Architecture, Digital Electronics<br>
-                            <span><b style="font-weight:bold">SGPA :</b></span> 9.86, 9.66, 9.65
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-content">
-                        <h3 class="date">April 2019 - April 2020</h3>
-                        <h1>Higher Secondary</h1>
-                        <p>
-                            <b style="font-weight:bold">Hem Sheela Model School</b><br>
-                            <span><b style="font-weight:bold">Board :</b></span> Central Board of Secondary
-                            Education<br>
-                            <span><b style="font-weight:bold">Courses :</b></span> Physics, Chemistry, Maths, Computer
-                            Science, English<br>
-                            <span><b style="font-weight:bold">Percentage :</b></span> 94%
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <div class="timeline-content">
-                        <h3 class="date">April 2017 - April 2018</h3>
-                        <h1>Secondary</h1>
-                        <p>
-                            <b style="font-weight:bold">Hem Sheela Model School</b><br>
-                            <span><b style="font-weight:bold">Board :</b></span> Central Board of Secondary
-                            Education<br>
-                            <span><b style="font-weight:bold">Courses :</b></span> Science, Mathematics, History,
-                            Civics, Geography, Economics, Bengali, English<br>
-                            <span><b style="font-weight:bold">Percentage :</b></span> 93.8%
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <!-- Promo Section -->
-    <div class="promo">
-        <div class="promo1">
-            <span><a href="#work" class="btn btn-border-1 left-go"><i class="fa fa-th"> </i> View my
-                    Works</a></span>
-            <span><a href="#work" class="btn btn-border-1 left-go"><i class="fa-solid fa-file"></i> My Resume</a></span>
-        </div>
-    </div>
-
-
-    <!-- Work Section -->
-    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="work">
-        <h3 class="w3-center">MY WORK</h3>
-        <p class="w3-center w3-large">Projects and Certificates</p>
-
-        <div class="w3-row-padding" style="margin-top:64px">
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <!-- <img src="C:\Users\AMARJIT\Desktop\project_imges\textutills.png" -->
-                <img src="./project_images/textutills.png" style="width:100%; margin-bottom: 18px;"
-                    class="a-hover-opacity" alt="Textutills - An Online Text Editor">
-                <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Textutills-TextEditor.git</p>
-            </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/find_my_train.png" style="width:100%; margin-bottom: 18px;"
-                    class="a-hover-opacity" alt="Find My Train">
-                <p class="hide" style="display: none;">https://google.com</p>
-            </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/getbus.jpg" style="width:100%; margin-bottom: 18px;" class="a-hover-opacity"
-                    alt="GetBus - online bus booking website">
-                <p class="hide" style="display: none;">
-                    https://github.com/Amarjit-Khan/GetBus---online-bus-booking-website.git</p>
-            </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/iNotes.png" style="width:100%; margin-bottom: 18px;" class="a-hover-opacity"
-                    alt="iNotes - Instant note maker">
-                <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/iNotes.git</p>
+                Hi, I am Amarjit Khan, a Full Stack Web Developer and coder. I am from India (West Bengal). I am
+                currently pursuing B.tech from Government College of Engineering and Ceramic Technology, Beleghata.
+                I have great interest in the field of Cyber-Security and Cloud Computing. I don't like to define myself
+                by the work I've done. I define myself by the work I want to
+                do. Skills can be taught, personality is inherent. I prefer to keep learning, continue challenging
+                myself,
+                and do interesting things that matter. Fueled by high energy
+                levels and boundless enthusiasm, I'm easily inspired and more than willing to follow my fascinations
+                wherever they take me. I'm passionate,
+                expressive, multi-talented spirit with a natural ability to entertain and inspire. I'm never satisfied
+                to
+                just come up with ideas.
+                Instead I have an utmost impulsive need to act on them. My abundant energy fuels me in the pursuit of
+                many
+                interests, hobbies, areas of study and artistic endeavors.
+                I'm a fast learner, able to pick up new skills and juggle different projects and roles with ease.
+                <!-- <p><b>FULLNAME :</b> Amarjit Khan</p>
+            <p><b>BIRTH DATE :</b> June 1, 2002</p>
+            <p>PRONOUNS: He, His</p>
+            <p><b>EMAIL :</b> amarjitkhan740@gmail.com</p> -->
             </div>
         </div>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/trip.png" style="width:100%; margin-bottom: 18px;" class="a-hover-opacity"
-                    alt="Travel Form">
-                <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Travel-Form.git</p>
-            </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/iEducate.png" style="width:100%; margin-bottom: 18px;"
-                    class="a-hover-opacity" alt="iEducate - Online Education">
-                <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/iEducate.git</p>
-            </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/the_food_cuisine.png" style="width:100%; margin-bottom: 18px;"
-                    class="a-hover-opacity" alt="The Food Cuisine - Online Food Ordering Website">
-                <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/The-Food-Cuisine.git</p>
-            </div>
-
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/bluesnap.png" style="width:100%; margin-bottom: 18px;"
-                    class="a-hover-opacity" alt="Bluesnap Website clone">
-                <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Bluesnap-Clone.git</p>
+        <!-- Education Section -->
+        <h3 class="w3-center">Education</h3>
+        <br>
+        <div class="container">
+            <div class="timeline">
+                <ul>
+                    <li>
+                        <div class="timeline-content">
+                            <h3 class="date">April 2020 - Present Date</h3>
+                            <h1>Bachelor of Technology Degree</h1>
+                            <p>
+                                <b style="font-weight:bold">Govenment College of Engineering and Ceramic
+                                    Technology</b><br>
+                                <span><b style="font-weight:bold">Department :</b></span> Computer Science and
+                                Engineering<br>
+                                <span><b style="font-weight:bold">Courses :</b></span> Data Structures, Algorithms,
+                                Computer
+                                Organisation, Computer Architecture, Digital Electronics<br>
+                                <span><b style="font-weight:bold">SGPA :</b></span> 9.86, 9.66, 9.65
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3 class="date">April 2019 - April 2020</h3>
+                            <h1>Higher Secondary</h1>
+                            <p>
+                                <b style="font-weight:bold">Hem Sheela Model School</b><br>
+                                <span><b style="font-weight:bold">Board :</b></span> Central Board of Secondary
+                                Education<br>
+                                <span><b style="font-weight:bold">Courses :</b></span> Physics, Chemistry, Maths,
+                                Computer
+                                Science, English<br>
+                                <span><b style="font-weight:bold">Percentage :</b></span> 94%
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-content">
+                            <h3 class="date">April 2017 - April 2018</h3>
+                            <h1>Secondary</h1>
+                            <p>
+                                <b style="font-weight:bold">Hem Sheela Model School</b><br>
+                                <span><b style="font-weight:bold">Board :</b></span> Central Board of Secondary
+                                Education<br>
+                                <span><b style="font-weight:bold">Courses :</b></span> Science, Mathematics, History,
+                                Civics, Geography, Economics, Bengali, English<br>
+                                <span><b style="font-weight:bold">Percentage :</b></span> 93.8%
+                            </p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./project_images/amazon.png" style="width:100%;
+
+        <!-- Promo Section -->
+        <div class="promo">
+            <div class="promo1">
+                <span><a href="#work" class="btn btn-border-1 left-go"><i class="fa fa-th"> </i> My
+                        Works</a></span>
+                <span><a target="_blank" href="https://resume.io/r/LFXYfWr9c" class="btn btn-border-1 left-go"><i class="fa-solid fa-file"></i> My
+                        Resume</a></span>
+            </div>
+        </div>
+
+
+        <!-- Work Section -->
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="work">
+            <h3 class="w3-center">MY WORK</h3>
+            <p class="w3-center w3-large">Projects and Certificates</p>
+
+            <div class="w3-row-padding" style="margin-top:64px">
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <!-- <img src="C:\Users\AMARJIT\Desktop\project_imges\textutills.png" -->
+                    <img src="./project_images/mern-blog.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="My-blogs">
+                    <p class="hide" style="display: none;">https://google.com</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <!-- <img src="C:\Users\AMARJIT\Desktop\project_imges\textutills.png" -->
+                    <img src="./project_images/textutills.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="Textutills - An Online Text Editor">
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Textutills-TextEditor.git</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/find_my_train.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="Find My Train">
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Find_My_Train.git</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/getbus.jpg" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="GetBus - online bus booking website">
+                    <p class="hide" style="display: none;">
+                        https://github.com/Amarjit-Khan/GetBus---online-bus-booking-website.git</p>
+                </div>
+            </div>
+
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/iNotes.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="iNotes - Instant note maker">
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/iNotes.git</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/trip.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="Travel Form">
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Travel-Form.git</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/iEducate.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="iEducate - Online Education">
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/iEducate.git</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/the_food_cuisine.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="The Food Cuisine - Online Food Ordering Website">
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/The-Food-Cuisine.git</p>
+                </div>
+
+            </div>
+
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/bluesnap.png" style="width:100%; margin-bottom: 18px;"
+                        class="a-hover-opacity" alt="Bluesnap Website clone">
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Bluesnap-Clone.git</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./project_images/amazon.png" style="width:100%;
                     margin-bottom: 18px;" class="a-hover-opacity" alt="Amazon Website clone">
-                <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Amazon-Clone.git</p>
+                    <p class="hide" style="display: none;">https://github.com/Amarjit-Khan/Amazon-Clone.git</p>
+                </div>
+
             </div>
 
-        </div>
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./cert_images/codechef.png" style="width:100%; margin-bottom: 18px; height: 200px;"
+                        class="a-hover-opacity" alt="Codechef - CODE'WALK Appreciation Certificate">
+                    <p class="hide" style="display: none;">https://www.codechef.com/</p>
+                </div>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./cert_images/codechef.png" style="width:100%; margin-bottom: 18px; height: 200px;"
-                    class="a-hover-opacity" alt="Codechef - CODE'WALK Appreciation Certificate">
-                <p class="hide" style="display: none;">https://www.codechef.com/</p>
-            </div>
-
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./cert_images/Google_cloud.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
-                    class="a-hover-opacity" alt="Google Cloud - 30 Days of Cloud Program">
-                <p class="hide" style="display: none;">https://cloud.google.com/</p>
-            </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./cert_images/edureka.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
-                    class="a-hover-opacity" alt="Edureka - Full Stack Web Development Session">
-                <p class="hide" style="display: none;">https://www.edureka.co/</p>
-            </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./cert_images/microsoft_ai.jpg" style="width:100%;
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./cert_images/Google_cloud.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
+                        class="a-hover-opacity" alt="Google Cloud - 30 Days of Cloud Program">
+                    <p class="hide" style="display: none;">https://cloud.google.com/</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./cert_images/edureka.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
+                        class="a-hover-opacity" alt="Edureka - Full Stack Web Development Session">
+                    <p class="hide" style="display: none;">https://www.edureka.co/</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./cert_images/microsoft_ai.jpg" style="width:100%;
                     margin-bottom: 18px; height: 200px;" class="a-hover-opacity"
-                    alt="Microsoft - AI for Students Workshop">
-                <p class="hide" style="display: none;">https://www.microsoft.com/en-us/ai/ai-school</p>
+                        alt="Microsoft - AI for Students Workshop">
+                    <p class="hide" style="display: none;">https://www.microsoft.com/en-us/ai/ai-school</p>
+                </div>
+            </div>
+
+            <div class="w3-row-padding w3-section">
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./cert_images/skillsbuild1.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
+                        class="a-hover-opacity" alt="IBM Skillsbuild - Cyber-Security">
+                    <p class="hide" style="display: none;">https://skillsbuild.org</p>
+                </div>
+                <div class="w3-col l3 m6" onclick="onClick(this)">
+                    <img src="./cert_images/skillsbuild2.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
+                        class="a-hover-opacity" alt="IBM Skillsbuild - Cyber-Security Basics">
+                    <p class="hide" style="display: none;">https://skillsbuild.org</p>
+                </div>
+
             </div>
         </div>
 
-        <div class="w3-row-padding w3-section">
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./cert_images/skillsbuild1.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
-                    class="a-hover-opacity" alt="IBM Skillsbuild - Cyber-Security">
-                <p class="hide" style="display: none;">https://skillsbuild.org</p>
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="a-modal a-black" onclick="this.style.display='none'">
+            <span class="a-button w3-xxlarge a-black a-pad w3-display-topright" title="Close Modal Image">×</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption" class="a-opacity w3-large"></p>
+                <a id="show" class="a-opacity w3-large" href=" " target="_blank" style="text-decoration: dashed;">Click
+                    Here</a>
             </div>
-            <div class="w3-col l3 m6" onclick="onClick(this)">
-                <img src="./cert_images/skillsbuild2.jpg" style="width:100%; margin-bottom: 18px; height: 200px;"
-                    class="a-hover-opacity" alt="IBM Skillsbuild - Cyber-Security Basics">
-                <p class="hide" style="display: none;">https://skillsbuild.org</p>
-            </div>
-
         </div>
+
+
+        <div class="w3-container w3-padding-64" id="skills">
+            <div class="w3-row-padding">
+                <div>
+                    <h3>My Skills.</h3>
+                    <p>Things I am good at : </p>
+                </div>
+                <!-- <br> -->
+                <div>
+                    <span class="flex-class">
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-brands fa-react w3-margin-right"></i>React Framework</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:85%"><span
+                                        class="tooltiptext-black">85%</span>85%</div>
+                            </div>
+                        </div>
+
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-solid fa-cloud w3-margin-right"></i>Cloud</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:30%"><span
+                                        class="tooltiptext-black">30%</span>30%</div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="flex-class">
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-brands fa-php w3-margin-right"></i>Php</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:82%"><span
+                                        class="tooltiptext-black">82%</span>82%</div>
+                            </div>
+                        </div>
+
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-solid fa-database w3-margin-right"></i>Databases (MySql &
+                                MongoDB)</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:80%"><span
+                                        class="tooltiptext-black">80%</span>80%</div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="flex-class">
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-brands fa-js w3-margin-right"></i>JavaScript</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:75%"><span
+                                        class="tooltiptext-black">75%</span>75%</div>
+                            </div>
+                        </div>
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-solid fa-code w3-margin-right"></i>C, C++ and Python
+                                Language
+                            </div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:90%"><span
+                                        class="tooltiptext-black">90%</span>90%</div>
+                            </div>
+                        </div>
+
+                    </span>
+                    <span class="flex-class">
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-solid fa-terminal w3-margin-right"></i>Git Bash</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:90%"><span
+                                        class="tooltiptext-black">90%</span>90%</div>
+                            </div>
+                        </div>
+
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa-brands fa-bootstrap w3-margin-right"></i>Bootstrap</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:75%"><span
+                                        class="tooltiptext-black">75%</span>75%</div>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="flex-class">
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa fa-html5 w3-margin-right"></i>HTML</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:90%"><span
+                                        class="tooltiptext-black">90%</span>90%</div>
+                            </div>
+                        </div>
+
+                        <div style="margin: 17px 0px 17px 0px;">
+
+                            <div class="a-wide"><i class="fa fa-css3 w3-margin-right"></i>CSS</div>
+                            <!-- <br> -->
+                            <div class="a-grey tooltip-black">
+                                <div class="w3-container w3-dark-grey w3-center" style="width:90%"><span
+                                        class="tooltiptext-black">90%</span>90%</div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contact Section -->
+        <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+            <h3 class="w3-center">CONTACT</h3>
+            <p class="w3-center w3-large">Lets get in touch. Send me a message:</p>
+            <div style="margin-top:48px">
+                <p><a href="https://www.google.com/maps/place/Durgapur,+West+Bengal/@23.5524937,87.3274874,11.76z/data=!4m5!3m4!1s0x39f7710b47a89171:0x429e1bdb57e009dd!8m2!3d23.5204443!4d87.3119227"
+                        style="text-decoration: none;" target="_blank"><i
+                            class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
+                        Durgapur, West Bengal (India)</a></p>
+                <p><a href="tel:8509630663" style="text-decoration: none;" target="_blank"><i
+                            class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 91+8509630663</a></p>
+                <p><a href="mailto:amarjitkhan740@gmail.com" style="text-decoration: none;" target="_blank"><i
+                            class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:
+                        amarjitkhan740@gmail.com</a></p>
+                <br>
+                <form action="https://formsubmit.co/btheory994@gmail.com" method="POST">
+                    <p><input class="a-input" type="text" placeholder="Name" required name="name" autocomplete="off">
+                    </p>
+                    <p><input class="a-input" type="email" placeholder="Email" required name="email" autocomplete="off">
+                    </p>
+                    <p><input type="hidden" name="_next" value="https://amarjit-khan.github.io/Amarjit.github.io/#home">
+                    </p>
+                    <p><input type="hidden" name="_subject" value="New email WOOOO!"></p>
+                    <p><input class="a-input" type="text" placeholder="Subject" required name="subject"
+                            autocomplete="off">
+                    </p>
+                    <p><input class="a-input" type="text" placeholder="Message" required name="message"
+                            autocomplete="off">
+                    </p>
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <p>
+                        <button class="btn btn-border-1" type="submit" style="font-size: 14px; margin-left: 0%;">
+                            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+                        </button>
+                    </p>
+                </form>
+                <!-- Image of location/map -->
+                <!-- <img src="map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px"> -->
+                <img src="map.jpg" class="w3-image" style="width:100%;margin-top:48px">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w3-center w3-black w3-padding-64">
+            <a href="#home" class="a-button w3-light-grey a-hover-opacity"><i
+                    class="fa fa-arrow-up w3-margin-right"></i>To
+                the top</a>
+            <div class="w3-xlarge w3-section">
+                <a href="#"><i class="fa fa-facebook-official a-hover-opacity"></i></a>
+                <a href="https://www.instagram.com/__amar_jit__/" target="_blank"><i
+                        class="fa fa-instagram a-hover-opacity"></i></a>
+                <a href="https://github.com/Amarjit-Khan" target="_blank"><i
+                        class="fa-brands fa-github a-hover-opacity"></i></a>
+                <a href="https://www.hackerrank.com/amarjitkhan740" target="_blank"><i
+                        class="fa-brands fa-hackerrank a-hover-opacity"></i></a>
+                <!-- <a href="#"><i class="fa fa-twitter a-hover-opacity"></i></a> -->
+                <a href="https://www.linkedin.com/in/amarjit-khan-0b6985233" target="_blank"><i
+                        class="fa fa-linkedin a-hover-opacity"></i></a>
+            </div>
+            <p>Made by<a href="https://www.linkedin.com/in/amarjit-khan-0b6985233/" target="_blank"
+                    style="text-decoration: none;" class="a-hover-opacity"> @Amarjit</a></p>
+        </footer>
     </div>
-
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="a-modal a-black" onclick="this.style.display='none'">
-        <span class="a-button w3-xxlarge a-black w3-padding-large w3-display-topright"
-            title="Close Modal Image">×</span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-            <img id="img01" class="w3-image">
-            <p id="caption" class="a-opacity w3-large"></p>
-            <a id="show" class="a-opacity w3-large" href=" " target="_blank" style="text-decoration: dashed;">Click
-                Here</a>
-        </div>
-    </div>
-
-
-    <div class="w3-container w3-padding-64" id="skills">
-        <div class="w3-row-padding">
-            <div>
-                <h3>My Skills.</h3>
-                <p>Things I am good at : </p>
-            </div>
-            <!-- <br> -->
-            <div>
-                <span class="flex-class">
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-brands fa-react w3-margin-right"></i>React Framework</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
-                        </div>
-                    </div>
-
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-solid fa-cloud w3-margin-right"></i>Cloud</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:50%">30%</div>
-                        </div>
-                    </div>
-                </span>
-                <span class="flex-class">
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-brands fa-php w3-margin-right"></i>Php</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:82%">82%</div>
-                        </div>
-                    </div>
-
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-solid fa-database w3-margin-right"></i>Databases (MySql &
-                            MongoDB)</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:80%">80%</div>
-                        </div>
-                    </div>
-                </span>
-                <span class="flex-class">
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-brands fa-js w3-margin-right"></i>JavaScript</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-                        </div>
-                    </div>
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-solid fa-code w3-margin-right"></i>C, C++ and Python Language
-                        </div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-                        </div>
-                    </div>
-
-                </span>
-                <span class="flex-class">
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-solid fa-terminal w3-margin-right"></i>Git Bash</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-                        </div>
-                    </div>
-
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa-brands fa-bootstrap w3-margin-right"></i>Bootstrap</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-                        </div>
-                    </div>
-                </span>
-                <span class="flex-class">
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa fa-html5 w3-margin-right"></i>HTML</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-                        </div>
-                    </div>
-
-                    <div style="margin: 17px 0px 17px 0px;">
-
-                        <div class="a-wide"><i class="fa fa-css3 w3-margin-right"></i>CSS</div>
-                        <!-- <br> -->
-                        <div class="a-grey">
-                            <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
-                        </div>
-                    </div>
-                </span>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Contact Section -->
-    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-        <h3 class="w3-center">CONTACT</h3>
-        <p class="w3-center w3-large">Lets get in touch. Send me a message:</p>
-        <div style="margin-top:48px">
-            <p><a href="https://www.google.com/maps/place/Durgapur,+West+Bengal/@23.5524937,87.3274874,11.76z/data=!4m5!3m4!1s0x39f7710b47a89171:0x429e1bdb57e009dd!8m2!3d23.5204443!4d87.3119227"
-                    style="text-decoration: none;" target="_blank"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
-                    Durgapur, West Bengal (India)</a></p>
-            <p><a href="tel:8509630663" style="text-decoration: none;" target="_blank"><i
-                        class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: 91+8509630663</a></p>
-            <p><a href="mailto:amarjitkhan740@gmail.com" style="text-decoration: none;" target="_blank"><i
-                        class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:
-                    amarjitkhan740@gmail.com</a></p>
-            <br>
-           <form action="https://formsubmit.co/btheory994@gmail.com" method="POST">
-                <p><input class="a-input" type="text" placeholder="Name" required name="name" autocomplete="off"></p>
-                <p><input class="a-input" type="email" placeholder="Email" required name="email" autocomplete="off"></p>
-                <p><input type="hidden" name="_next" value="https://amarjit-khan.github.io/Amarjit.github.io/#home"></p>
-                <p><input type="hidden" name="_subject" value="New email WOOOO!"></p>
-                <p><input class="a-input" type="text" placeholder="Subject" required name="subject" autocomplete="off">
-                </p>
-                <p><input class="a-input" type="text" placeholder="Message" required name="message" autocomplete="off">
-                </p>
-                <input type="hidden" name="_captcha" value="false">
-
-                <p>
-                    <button class="btn btn-border-1" type="submit" style="font-size: 14px; margin-left: 0%;">
-                        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-                    </button>
-                </p>
-            </form>
-            <!-- Image of location/map -->
-            <img src="map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-64">
-        <a href="#home" class="a-button w3-light-grey a-hover-opacity"><i class="fa fa-arrow-up w3-margin-right"></i>To
-            the top</a>
-        <div class="w3-xlarge w3-section">
-            <a href="#"><i class="fa fa-facebook-official a-hover-opacity"></i></a>
-            <a href="#"><i class="fa fa-instagram a-hover-opacity"></i></a>
-            <a href="https://github.com/Amarjit-Khan" target="_blank"><i
-                    class="fa-brands fa-github a-hover-opacity"></i></a>
-            <a href="#"><i class="fa-brands fa-hackerrank a-hover-opacity"></i></a>
-            <!-- <a href="#"><i class="fa fa-twitter a-hover-opacity"></i></a> -->
-            <a href="#"><i class="fa fa-linkedin a-hover-opacity"></i></a>
-        </div>
-        <p>Made by<a href="#" style="text-decoration: none;" class="a-hover-opacity"> @Amarjit</a></p>
-    </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="application/javascript">
         // Modal Image Gallery
         function onClick(element) {
@@ -491,11 +565,13 @@
         }
 
         //preloader
-        var loader = document.getElementById("preloader");
 
-        window.addEventListener("load", () => {
-            loader.style.display = "none";
-        })
+        $(window).on('load', function () {
+            $(".loader").fadeOut(1000);
+            $(".content").fadeIn(1000);
+        });
+
+    
     </script>
     <script src="https://kit.fontawesome.com/7f8f916295.js" crossorigin="anonymous"></script>
     <!-- <script src="index.js" crossorigin="anonymous"></script> -->
