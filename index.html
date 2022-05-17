@@ -51,7 +51,19 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background-size: 15%;
+        background-size: 30%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .loader>div {
+            background-size: 44%;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .loader>div {
+            background-size: 60%;
+        }
     }
 </style>
 
@@ -86,10 +98,10 @@
             style="display:none" id="mySidebar">
             <a href="javascript:void(0)" onclick="a_close()" class="a-bar-item a-button w3-padding-16 a-medium">Close
                 ×</a>
-            <a href="#about" class="a-bar-item a-button buttonhover">ABOUT</a>
-            <a href="#work" class="a-bar-item a-button buttonhover">WORK</a>
-            <a href="#skills" class="a-bar-item a-button buttonhover"> SKILLS</a>
-            <a href="#contact" class="a-bar-item a-button buttonhover">CONTACT</a>
+            <a href="#about" onclick="a_close()" class="a-bar-item a-button buttonhover">ABOUT</a>
+            <a href="#work" onclick="a_close()" class="a-bar-item a-button buttonhover">WORK</a>
+            <a href="#skills" onclick="a_close()" class="a-bar-item a-button buttonhover"> SKILLS</a>
+            <a href="#contact" onclick="a_close()" class="a-bar-item a-button buttonhover">CONTACT</a>
         </nav>
 
         <!-- Header with full-height image -->
@@ -220,7 +232,8 @@
             <div class="promo1">
                 <span><a href="#work" class="btn btn-border-1 left-go"><i class="fa fa-th"> </i> My
                         Works</a></span>
-                <span><a target="_blank" href="https://resume.io/r/LFXYfWr9c" class="btn btn-border-1 left-go"><i class="fa-solid fa-file"></i> My
+                <span><a target="_blank" href="https://resume.io/r/LFXYfWr9c" class="btn btn-border-1 left-go"><i
+                            class="fa-solid fa-file"></i> My
                         Resume</a></span>
             </div>
         </div>
@@ -528,7 +541,7 @@
                 <a href="https://www.linkedin.com/in/amarjit-khan-0b6985233" target="_blank"><i
                         class="fa fa-linkedin a-hover-opacity"></i></a>
             </div>
-            <p>Made by<a href="https://www.linkedin.com/in/amarjit-khan-0b6985233/" target="_blank"
+            <p>Designed by<a href="https://www.linkedin.com/in/amarjit-khan-0b6985233/" target="_blank"
                     style="text-decoration: none;" class="a-hover-opacity"> @Amarjit</a></p>
         </footer>
     </div>
@@ -571,7 +584,7 @@
             $(".content").fadeIn(1000);
         });
 
-    
+
     </script>
     <script src="https://kit.fontawesome.com/7f8f916295.js" crossorigin="anonymous"></script>
     <!-- <script src="index.js" crossorigin="anonymous"></script> -->
